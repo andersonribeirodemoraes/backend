@@ -1,3 +1,5 @@
+const port = process.env.PORT || 3000
+
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
@@ -30,4 +32,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'temp')))
 
 app.use(require('./routes'))
 
-server.listen(3000)
+server.listen(port)
